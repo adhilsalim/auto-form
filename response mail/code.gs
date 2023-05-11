@@ -22,40 +22,45 @@ function sendEmail(e) {
       ",\n\n" +
       "Congratulations on completing the Introduction to Command Line! We hope you have learned the basic commands and can now navigate your way around the command line with ease. We have received your screenshots and will review them shortly.\n\n" +
       "Thanks for your participation.\n\n" +
-      "Happy Coding!\n";
+      "Happy Coding!\nLaunchPad - Internship Program,\nStartups Valley TBI";
   } else if (selectedTask === "#2 Introduction to GitHub") {
-    subject = "Congrats on completing the Introduction to GitHub!";
+    subject =
+      firstName + ", congratulations on completing Introduction to GitHub!";
     message =
       "Dear " +
       firstName +
       ",\n\n" +
       "Congrats on completing the Introduction to GitHub! We hope you found it informative and useful in your journey as a developer. We have received your GitHub repository URL and will review it shortly.\n\n" +
-      "Happy Coding!\n";
+      "Happy Coding!\nLaunchPad - Internship Program,\nStartups Valley TBI";
   } else if (selectedTask == "#3 Introduction to Markdown") {
-    subject = "Congrats on completing the Introduction to Markdown";
+    subject =
+      firstName + ", congratulations on completing Introduction to Markdown!";
     message =
       "Hi " +
       firstName +
       ",\n\n" +
       "Congrats on completing Introduction to Markdown. We have received your repository URL and will review it shortly.\n\n" +
-      "Happy Coding!\n";
+      "Happy Coding!\nLaunchPad - Internship Program,\nStartups Valley TBI";
   } else if (selectedTask === "#4 Introduction to HTML") {
-    subject = "Thanks for submitting your FreeCodeCamp profile URL";
+    subject =
+      firstName + ", congratulations on completing Introduction to HTML!";
     message =
       "Hi " +
       firstName +
       ",\n\n" +
       "Thanks for submitting your FreeCodeCamp profile URL. We will use it to verify your completion of the Introduction to HTML. Please ensure that the URL you submitted is correct and leads directly to your FreeCodeCamp profile page.\n\n" +
       "If we have any issues with the verification process, we will be in touch with you to discuss further.\n\n" +
-      "Happy Coding!\n";
+      "Happy Coding!\nLaunchPad - Internship Program,\nStartups Valley TBI";
   } else if (selectedTask === "#5 Introduction to GitHub Pages") {
-    subject = "Thank you for submitting your GitHub Pages URL";
+    subject =
+      firstName +
+      ", congratulations on completing Introduction to GitHub Pages!";
     message =
       "Hi " +
       firstName +
       ",\n\n" +
       "Thank you for submitting your GitHub Pages URL for Introduction to GitHub Pages. We have received your GitHub Pages URL and will review it shortly. If there are any issues, we will be in touch with you to discuss further.\n\n" +
-      "Happy Coding!\n";
+      "Happy Coding!\nLaunchPad - Internship Program,\nStartups Valley TBI";
   }
 
   // Send the email
