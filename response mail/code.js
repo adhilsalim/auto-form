@@ -23,7 +23,7 @@ function sendEmail(e) {
       "Congratulations on completing the Introduction to Command Line! We hope you have learned the basic commands and can now navigate your way around the command line with ease. We have received your screenshots and will review them shortly.\n\n" +
       "Thanks for your participation.\n\n" +
       "Happy Coding!\n";
-  } else if (selectedTask === "#2 #2 Introduction to GitHub") {
+  } else if (selectedTask === "#2 Introduction to GitHub") {
     subject = "Congrats on completing the Introduction to GitHub!";
     message =
       "Dear " +
@@ -47,6 +47,14 @@ function sendEmail(e) {
       ",\n\n" +
       "Thanks for submitting your FreeCodeCamp profile URL. We will use it to verify your completion of the Introduction to HTML. Please ensure that the URL you submitted is correct and leads directly to your FreeCodeCamp profile page.\n\n" +
       "If we have any issues with the verification process, we will be in touch with you to discuss further.\n\n" +
+      "Happy Coding!\n";
+  } else if (selectedTask === "#5 Introduction to GitHub Pages") {
+    subject = "Thank you for submitting your GitHub Pages URL";
+    message =
+      "Hi " +
+      firstName +
+      ",\n\n" +
+      "Thank you for submitting your GitHub Pages URL for Introduction to GitHub Pages course. We have received your GitHub Pages URL and will review it shortly. If there are any issues, we will be in touch with you to discuss further.\n\n" +
       "Happy Coding!\n";
   }
 
