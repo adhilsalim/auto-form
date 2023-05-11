@@ -32,6 +32,13 @@ function sendEmail(e) {
       "Congrats on completing the Introduction to GitHub course! We hope you found it informative and useful in your journey as a developer. We have received your GitHub repository URL and will review it shortly.\n\n" +
       "Happy Coding!\n";
   } else if (selectedTask == "#3 Introduction to Markdown") {
+    subject = "Congrats on completing the Introduction to Markdown";
+    message =
+      "Hi " +
+      firstName +
+      ",\n\n" +
+      "Congrats on completing Introduction to Markdown. We have received your repository URL and will review it shortly.\n\n" +
+      "Happy Coding!\n";
   } else if (selectedTask === "#4 Introduction to HTML") {
     subject = "Thanks for submitting your FreeCodeCamp profile URL";
     message =
