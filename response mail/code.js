@@ -24,6 +24,14 @@ function sendEmail(e) {
       "Thanks for your participation.\n\n" +
       "Happy Coding!\n";
   } else if (selectedTask === "#2 #2 Introduction to GitHub") {
+    subject = "Congrats on completing the Introduction to GitHub!";
+    message =
+      "Dear " +
+      firstName +
+      ",\n\n" +
+      "Congrats on completing the Introduction to GitHub course! We hope you found it informative and useful in your journey as a developer. We have received your GitHub repository URL and will review it shortly.\n\n" +
+      "Happy Coding!\n";
+  } else if (selectedTask === "#4 Introduction to HTML") {
   }
 
   // Send the email
