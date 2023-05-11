@@ -31,7 +31,16 @@ function sendEmail(e) {
       ",\n\n" +
       "Congrats on completing the Introduction to GitHub course! We hope you found it informative and useful in your journey as a developer. We have received your GitHub repository URL and will review it shortly.\n\n" +
       "Happy Coding!\n";
+  } else if (selectedTask == "#3 Introduction to Markdown") {
   } else if (selectedTask === "#4 Introduction to HTML") {
+    subject = "Thanks for submitting your FreeCodeCamp profile URL";
+    message =
+      "Hi " +
+      firstName +
+      ",\n\n" +
+      "Thanks for submitting your FreeCodeCamp profile URL. We will use it to verify your completion of the Introduction to HTML. Please ensure that the URL you submitted is correct and leads directly to your FreeCodeCamp profile page.\n\n" +
+      "If we have any issues with the verification process, we will be in touch with you to discuss further.\n\n" +
+      "Happy Coding!\n";
   }
 
   // Send the email
