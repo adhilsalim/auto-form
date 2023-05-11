@@ -2,7 +2,6 @@ function sendEmail(e) {
   // Get the form responses
   var fullName = e.namedValues["Full Name:"][0];
   var emailAddress = e.namedValues["Email address"][0];
-  var contactNumber = e.namedValues["Contact Number (WhatsApp preferred):"][0];
   var selectedTask = e.namedValues["Select Task:"][0];
 
   // Split the full name into first and last names
@@ -54,7 +53,7 @@ function sendEmail(e) {
       "Hi " +
       firstName +
       ",\n\n" +
-      "Thank you for submitting your GitHub Pages URL for Introduction to GitHub Pages course. We have received your GitHub Pages URL and will review it shortly. If there are any issues, we will be in touch with you to discuss further.\n\n" +
+      "Thank you for submitting your GitHub Pages URL for Introduction to GitHub Pages. We have received your GitHub Pages URL and will review it shortly. If there are any issues, we will be in touch with you to discuss further.\n\n" +
       "Happy Coding!\n";
   }
 
