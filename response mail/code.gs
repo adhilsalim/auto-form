@@ -26,7 +26,7 @@ function sendEmail(e) {
   } else if (selectedTask == "#3 Introduction to Markdown") {
     subject =
       firstName + ", congratulations on completing Introduction to Markdown!";
-    message_header = `Hey ${firstName} 👋, <br><br>Great job on completing the Introduction to Markdown 🎉<br><br>You now have the basic knowledge required to create simple formatted text documents with ease using Markdown syntax. You should now be able to create headers, lists, links, and images in your documents, and even use advanced formatting techniques like tables and code blocks.`;
+    message_header = `Hey ${firstName} 👋, <br><br>Great job on completing the Introduction to Markdown 🎉<br><br>You now have the basic knowledge required to create simple formatted text documents with ease using Markdown syntax. You should now be able to create headers, lists, links, and images in your documents.`;
   } else if (selectedTask === "#4 Introduction to HTML") {
     subject =
       firstName + ", congratulations on completing Introduction to HTML!";
