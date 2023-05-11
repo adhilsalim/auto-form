@@ -2,6 +2,7 @@ function sendEmail(e) {
   // Get the form responses
   var fullName = e.namedValues["Full Name:"][0];
   var emailAddress = e.namedValues["Email address"][0];
+  // var emailAddress = "adhilsalim2025@cs.ajce.in";
   var selectedTask = e.namedValues["Select Task:"][0];
 
   // Split the full name into first and last names
@@ -28,7 +29,7 @@ function sendEmail(e) {
       "Dear " +
       firstName +
       ",\n\n" +
-      "Congrats on completing the Introduction to GitHub course! We hope you found it informative and useful in your journey as a developer. We have received your GitHub repository URL and will review it shortly.\n\n" +
+      "Congrats on completing the Introduction to GitHub! We hope you found it informative and useful in your journey as a developer. We have received your GitHub repository URL and will review it shortly.\n\n" +
       "Happy Coding!\n";
   } else if (selectedTask == "#3 Introduction to Markdown") {
     subject = "Congrats on completing the Introduction to Markdown";
