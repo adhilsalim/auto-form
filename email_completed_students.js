@@ -30,6 +30,7 @@ function getDetailsOfCompletedStudents() {
   let completedTask4 = false;
   let completedTask5 = false;
   let studentDetails = "";
+  let taskPendingStudentsDetails = "";
   // loop through columns
   for (var i = 0; i < full_name_values.length; i++) {
     if (currentStudent == full_name_values[i][0]) {
@@ -56,13 +57,20 @@ function getDetailsOfCompletedStudents() {
         completedTask4 &&
         completedTask5
       ) {
-        studentDetails += `${currentStudent} has completed all tasks\n`;
+        studentDetails += `✅ ${currentStudent} has completed all tasks\n`;
       } else {
-        studentDetails += `${currentStudent} has not completed the following task: ${
+        studentDetails += `❌ ${currentStudent} has not completed the following task: ${
           completedTask1 ? "" : "Task 1"
         } ${completedTask2 ? "" : "Task 2"} ${completedTask3 ? "" : "Task 3"} ${
           completedTask4 ? "" : "Task 4"
         } ${completedTask5 ? "" : "Task 5"}\n`;
+        taskPendingStudentsDetails += `${currentStudent}: ${
+          completedTask1 ? "" : "Task 1"
+        } ${completedTask2 ? "" : "Task 2"} ${completedTask3 ? "" : "Task 3"} ${
+          completedTask4 ? "" : "Task 4"
+        } ${completedTask5 ? "" : "Task 5"}\n${
+          currentStudent.split(" ")[0]
+        }'s contact number is ${contact_number_values[i - 1][0]}\n\n`;
       }
       currentStudent = full_name_values[i][0];
       completedTask1 = false;
@@ -70,7 +78,26 @@ function getDetailsOfCompletedStudents() {
       completedTask3 = false;
       completedTask4 = false;
       completedTask5 = false;
+
+      if (currentStudent == full_name_values[i][0]) {
+        if (upload_screenshot_values[i][0] != "") {
+          completedTask1 = true;
+        }
+        if (repo_url_one_values[i][0] != "") {
+          completedTask2 = true;
+        }
+        if (repo_url_two_values[i][0] != "") {
+          completedTask3 = true;
+        }
+        if (freecodecamp_url_values[i][0] != "") {
+          completedTask4 = true;
+        }
+        if (github_pages_url_values[i][0] != "") {
+          completedTask5 = true;
+        }
+      }
     }
   }
   Logger.log(studentDetails);
+  Logger.log(taskPendingStudentsDetails);
 }
