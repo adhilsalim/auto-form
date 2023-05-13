@@ -1,16 +1,17 @@
 function checkStudents() {
-  var sheet = SpreadsheetApp.getActive().getSheetByName("Sheet1"); // change the sheet name as needed
-  var range = sheet.getRange("C2:C"); // assuming the header row is in row 1
+  var sheet = SpreadsheetApp.getActive().getSheetByName("Sheet1"); // sheet name
+  var range = sheet.getRange("C2:C"); // column containing submitted students
   var values = range.getValues();
   var students = [];
   var studentList = "";
-  const timeNow = new Date().toString();
+  const timeNow = new Date().toString(); // get the current time
   const dateString =
     timeNow.split(" ")[0] +
     " " +
     timeNow.split(" ")[1] +
     " " +
     timeNow.split(" ")[2];
+
   // loop through the values and add names to the students array
   for (var i = 0; i < values.length; i++) {
     if (values[i][0] != "") {
@@ -28,19 +29,16 @@ function checkStudents() {
     }
   }
 
-  Logger.log(studentList);
+  const sendTo = "alanjames2023@cs.ajce.in";
+  const MailSubject = `List of students who have not completed the task ${dateString}`;
+  const MailBody = `The following students have not completed the task as of ${timeNow}:\n(This is an automated email)\n\n${studentList}`;
 
   // send an email with the list of missing students
   if (studentList != "") {
     MailApp.sendEmail({
-      to: "alanjames2023@cs.ajce.in",
-      subject:
-        "List of students who have not completed the task " + dateString + ".",
-      body:
-        "The following students have not completed the task as of " +
-        timeNow +
-        ":\n(This is an automated email)\n\n" +
-        studentList,
+      to: sendTo,
+      subject: MailSubject,
+      body: MailBody,
     });
   }
 }
