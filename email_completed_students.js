@@ -49,6 +49,23 @@ function getDetailsOfCompletedStudents() {
         completedTask5 = true;
       }
     } else {
+      if (
+        completedTask1 &&
+        completedTask2 &&
+        completedTask3 &&
+        completedTask4 &&
+        completedTask5
+      ) {
+        studentDetails += `${currentStudent} has completed all tasks\n`;
+      } else {
+        studentDetails += `${currentStudent} has not completed the following task: ${
+          completedTask1 ? "" : "Task 1, "
+        } ${completedTask2 ? "" : "Task 2, "} ${
+          completedTask3 ? "" : "Task 3, "
+        } ${completedTask4 ? "" : "Task 4, "} ${
+          completedTask5 ? "" : "Task 5, "
+        }\n`;
+      }
       currentStudent = full_name_values[i][0];
       completedTask1 = false;
       completedTask2 = false;
