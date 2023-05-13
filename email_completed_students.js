@@ -100,4 +100,17 @@ function getDetailsOfCompletedStudents() {
   }
   Logger.log(studentDetails);
   Logger.log(taskPendingStudentsDetails);
+
+  const sendTo = "alanjames2023@cs.ajce.in";
+  const MailSubject = `Student Details ${dateString}`;
+  const MailBody = `Dear Alan,\n\n the following are the complete details of students, please not that this is not manually verified.\n\n${student}\nThis is not manually generated.\n\nHere are the contact details of students who have not completed all tasks:\n\n${taskPendingStudentsDetails}\n\nRegards,\nAdhil Salim`;
+
+  // send an email with the list of missing students
+  if (studentList != "") {
+    MailApp.sendEmail({
+      to: sendTo,
+      subject: MailSubject,
+      body: MailBody,
+    });
+  }
 }
