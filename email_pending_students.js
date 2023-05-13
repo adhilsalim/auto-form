@@ -29,6 +29,7 @@ function checkStudents() {
     }
   }
 
+  // email details
   const sendTo = "alanjames2023@cs.ajce.in";
   const MailSubject = `List of students who have not completed the task ${dateString}`;
   const MailBody = `The following students have not completed the task as of ${timeNow}:\n(This is an automated email)\n\n${studentList}`;
