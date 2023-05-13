@@ -59,7 +59,7 @@ function getDetailsOfCompletedStudents() {
       ) {
         studentDetails += `✅ ${currentStudent} has completed all tasks\n`;
       } else {
-        studentDetails += `❌ ${currentStudent} has not completed the following task: ${
+        studentDetails += `❌ ${currentStudent} has not completed the following task(s): ${
           completedTask1 ? "" : "Task 1"
         } ${completedTask2 ? "" : "Task 2"} ${completedTask3 ? "" : "Task 3"} ${
           completedTask4 ? "" : "Task 4"
@@ -103,7 +103,7 @@ function getDetailsOfCompletedStudents() {
 
   const sendTo = "alanjames2023@cs.ajce.in";
   const MailSubject = `Student Details ${dateString}`;
-  const MailBody = `Dear Alan,\n\nThe following are the complete details of students, please not that this is neither manually verified nor manually generated.\n\n${studentDetails}\n\nHere are the contact details of students who have not completed all tasks:\n${taskPendingStudentsDetails}\n\nRegards,\nAdhil Salim`;
+  const MailBody = `Dear Alan,\n\nThe following is a list of students and their task completion status. Please note that the following details are neither manually verified nor manually generated.\n\n${studentDetails}\n\nHere are the contact details of students who have not completed all tasks:\n${taskPendingStudentsDetails}\n\nRegards,\nAdhil Salim`;
 
   // send an email with the list of missing students
   if (studentDetails != "") {
