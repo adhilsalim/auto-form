@@ -103,10 +103,10 @@ function getDetailsOfCompletedStudents() {
 
   const sendTo = "alanjames2023@cs.ajce.in";
   const MailSubject = `Student Details ${dateString}`;
-  const MailBody = `Dear Alan,\n\n the following are the complete details of students, please not that this is not manually verified.\n\n${student}\nThis is not manually generated.\n\nHere are the contact details of students who have not completed all tasks:\n\n${taskPendingStudentsDetails}\n\nRegards,\nAdhil Salim`;
+  const MailBody = `Dear Alan,\n\nThe following are the complete details of students, please not that this is neither manually verified nor manually generated.\n\n${studentDetails}\n\nHere are the contact details of students who have not completed all tasks:\n${taskPendingStudentsDetails}\n\nRegards,\nAdhil Salim`;
 
   // send an email with the list of missing students
-  if (studentList != "") {
+  if (studentDetails != "") {
     MailApp.sendEmail({
       to: sendTo,
       subject: MailSubject,
