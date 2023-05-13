@@ -15,4 +15,46 @@ function getDetailsOfCompletedStudents() {
   var repo_url_two_values = repo_url_two_column_range.getValues();
   var freecodecamp_url_values = freecodecamp_url_column_range.getValues();
   var github_pages_url_values = github_pages_url_column_range.getValues();
+
+  const timeNow = new Date().toString();
+  const dateString =
+    timeNow.split(" ")[0] +
+    " " +
+    timeNow.split(" ")[1] +
+    " " +
+    timeNow.split(" ")[2];
+  let currentStudent = full_name_column_range[0][0];
+  let completedTask1 = false;
+  let completedTask2 = false;
+  let completedTask3 = false;
+  let completedTask4 = false;
+  let completedTask5 = false;
+  let studentDetails;
+  // loop through columns
+  for (var i = 0; i < full_name_values.length; i++) {
+    if (currentStudent == full_name_values[i][0]) {
+      if (upload_screenshot_values[i][0] != "") {
+        completedTask1 = true;
+      }
+      if (repo_url_one_values[i][0] != "") {
+        completedTask2 = true;
+      }
+      if (repo_url_two_values[i][0] != "") {
+        completedTask3 = true;
+      }
+      if (freecodecamp_url_values[i][0] != "") {
+        completedTask4 = true;
+      }
+      if (github_pages_url_values[i][0] != "") {
+        completedTask5 = true;
+      }
+    } else {
+      currentStudent = full_name_values[i][0];
+      completedTask1 = false;
+      completedTask2 = false;
+      completedTask3 = false;
+      completedTask4 = false;
+      completedTask5 = false;
+    }
+  }
 }
