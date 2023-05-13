@@ -23,7 +23,7 @@ function getDetailsOfCompletedStudents() {
     timeNow.split(" ")[1] +
     " " +
     timeNow.split(" ")[2];
-  let currentStudent = full_name_column_range[0][0];
+  let currentStudent = full_name_values[0][0];
   let completedTask1 = false;
   let completedTask2 = false;
   let completedTask3 = false;
@@ -74,4 +74,5 @@ function getDetailsOfCompletedStudents() {
       completedTask5 = false;
     }
   }
+  Logger.log(studentDetails);
 }
