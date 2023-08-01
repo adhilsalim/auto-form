@@ -1,5 +1,5 @@
-## Google Forms Management Tools
-This repository contains a set of Google Apps Scripts developed me for the IEDC LaunchPad internship program at Amal Jyothi College Of Engineering, to help manage and track student progress on Google Forms. The scripts use Google's built-in scripting language, Apps Script, to automate tasks such as sending email notifications to students and teachers (by specifying email), and analyzing completion data from Google Sheets.
+## lazyChecker
+I was asked to validate the Google Form responses of about 60 students. That's a lot of work, so I was a bit lazy and decided to automate the process. I created some scripts, this repository contains those sciprts i developed for the IEDC LaunchPad internship program at Amal Jyothi College Of Engineering, to help manage and track student progress on Google Forms. The scripts use Google's built-in scripting language, Apps Script, to automate tasks such as sending email notifications to students and teachers (by specifying email), and analyzing completion data from Google Sheets.
 
 ## Features
 The repository contains three main scripts:
